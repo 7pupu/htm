@@ -1,0 +1,91 @@
+﻿<html>
+	<head>
+		<title>index.htm</title>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+
+console.log("www");
+
+$(document).ready(function(){
+  console.log("document ready");
+
+  $("#rotated").html("#rotated");
+  poi();
+}); 
+function poi0(){}
+function poi(){
+  console.log("poi");
+  $('#rotated').css({"transform":"rotate3d(0,1,0,-30deg)"});
+  //
+  document.getElementById("rotated").style.transform = "rotate3d(0,1,0,-50deg)";
+  
+  
+  var image_url="http://ram.komica2.net/00/src/1537618268340.jpg";
+  $('#rotated').css('background-image', 'url('+image_url+')');
+  var image_url="https://abc.2008php.com/2015_Website_appreciate/2015-07-19/20150719233109.jpg";
+  $('#nnn').css('background-image', 'url('+image_url+')');
+  
+  
+  $('#rotated').css({
+    "background-size":  "auto 100%",
+    "background-position":"center",
+  　"background-repeat":"no-repeat",
+
+  });
+
+
+  mytime();
+
+}
+
+
+rotation=0;
+function mytime(){
+  rotation=rotation+5;;
+  console.log("mytime="+rotation);
+  setTimeout(function(){
+    document.getElementById("rotated").style.transform = "rotate3d(0,1,0,"+rotation+"deg)";
+    mytime();
+  },100);
+}
+
+
+
+
+
+</script>
+<style>
+
+
+div {
+  width: 800px;
+  height: 800px;
+}
+
+#rotated {
+  width: 200px;
+  height: 200px;
+  border:solid rgba(255, 255, 255, 0) 50px;
+  margin: 0 auto 0 auto;
+
+}
+
+</style>
+
+	</head>
+	<body>
+<div id="nnn">
+<div id="rotated">Rotated</div>
+  
+  </div>
+
+
+
+	</body>
+</html>
